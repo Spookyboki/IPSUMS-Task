@@ -1,3 +1,101 @@
+@font-face {
+  font-family: 'Butler';
+  src: url("../fonts/Butler-ExtraBold.eot");
+  src: url("../fonts/Butler-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Butler-ExtraBold.woff2") format("woff2"), url("../fonts/Butler-ExtraBold.woff") format("woff"), url("../fonts/Butler-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler Stencil Extra Bold';
+  src: url("../fonts/ButlerStencil-ExtraBold.eot");
+  src: url("../fonts/ButlerStencil-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/ButlerStencil-ExtraBold.woff2") format("woff2"), url("../fonts/ButlerStencil-ExtraBold.woff") format("woff"), url("../fonts/ButlerStencil-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler Stencil';
+  src: url("../fonts/ButlerStencil-UltraLight.eot");
+  src: url("../fonts/ButlerStencil-UltraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/ButlerStencil-UltraLight.woff2") format("woff2"), url("../fonts/ButlerStencil-UltraLight.woff") format("woff"), url("../fonts/ButlerStencil-UltraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler';
+  src: url("../fonts/Butler-Light.eot");
+  src: url("../fonts/Butler-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Butler-Light.woff2") format("woff2"), url("../fonts/Butler-Light.woff") format("woff"), url("../fonts/Butler-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler';
+  src: url("../fonts/Butler-UltraLight.eot");
+  src: url("../fonts/Butler-UltraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Butler-UltraLight.woff2") format("woff2"), url("../fonts/Butler-UltraLight.woff") format("woff"), url("../fonts/Butler-UltraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler';
+  src: url("../fonts/Butler-Black.eot");
+  src: url("../fonts/Butler-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Butler-Black.woff2") format("woff2"), url("../fonts/Butler-Black.woff") format("woff"), url("../fonts/Butler-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler';
+  src: url("../fonts/Butler-Medium.eot");
+  src: url("../fonts/Butler-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Butler-Medium.woff2") format("woff2"), url("../fonts/Butler-Medium.woff") format("woff"), url("../fonts/utler-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler Stencil';
+  src: url("../fonts/ButlerStencil-Light.eot");
+  src: url("../fonts/ButlerStencil-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ButlerStencil-Light.woff2") format("woff2"), url("../fonts/ButlerStencil-Light.woff") format("woff"), url("../fonts/ButlerStencil-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler Stencil';
+  src: url("../fonts/ButlerStencil.eot");
+  src: url("../fonts/ButlerStencil.eot?#iefix") format("embedded-opentype"), url("../fonts/ButlerStencil.woff2") format("woff2"), url("../fonts/ButlerStencil.woff") format("woff"), url("../fonts/ButlerStencil.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler Stencil';
+  src: url("../fonts/ButlerStencil-Black.eot");
+  src: url("../fonts/ButlerStencil-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/ButlerStencil-Black.woff2") format("woff2"), url("../fonts/ButlerStencil-Black.woff") format("woff"), url("../fonts/ButlerStencil-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler';
+  src: url("../fonts/Butler.eot");
+  src: url("../fonts/Butler.eot?#iefix") format("embedded-opentype"), url("../fonts/Butler.woff2") format("woff2"), url("../fonts/Butler.woff") format("woff"), url("../fonts/Butler.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler Stencil';
+  src: url("../fonts/ButlerStencil-Medium.eot");
+  src: url("../fonts/ButlerStencil-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/ButlerStencil-Medium.woff2") format("woff2"), url("../fonts/ButlerStencil-Medium.woff") format("woff"), url("../fonts/ButlerStencil-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler bold';
+  src: url("../fonts/Butler-Bold.eot");
+  src: url("../fonts/Butler-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Butler-Bold.woff2") format("woff2"), url("../fonts/Butler-Bold.woff") format("woff"), url("../fonts/Butler-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Butler Stencil';
+  src: url("../fonts/ButlerStencil-Bold.eot");
+  src: url("../fonts/ButlerStencil-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ButlerStencil-Bold.woff2") format("woff2"), url("../fonts/ButlerStencil-Bold.woff") format("woff"), url("../fonts/utlerStencil-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
 html,
 body {
   margin: 0;
@@ -159,6 +257,12 @@ textarea {
 .white {
   color: #fff; }
 
+.blue {
+  color: #304061; }
+
+.brown {
+  color: #a9836b; }
+
 @font-face {
   font-family: 'icons';
   src: url("../fonts/icons.eot");
@@ -217,16 +321,16 @@ textarea {
 .s-prev:before {
   content: '\EA07'; }
 
-.container {
-  max-width: 1006px;
-  padding: 0 22px;
+.wrapper {
+  max-width: 1920px;
+  padding: 0 240px;
   margin: 0 auto; }
   @media (min-width: 768px) and (max-width: 1024px) {
-    .container {
+    .wrapper {
       max-width: 768px;
       padding: 0 22px; } }
   @media (max-width: 767px) {
-    .container {
+    .wrapper {
       min-width: 320px;
       padding: 0 20px; } }
 
@@ -371,6 +475,194 @@ textarea {
   .offset-6-t {
     margin-left: 100%; } }
 
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .col-1-m {
     width: 100%; } }
+
+a {
+  text-decoration: none; }
+
+.bolded {
+  font-weight: bold; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.header {
+  background-color: #fff;
+  width: 100%; }
+  .header ul {
+    display: flex;
+    justify-items: center; }
+  .header .header__logo {
+    display: inline-block;
+    padding-right: 47px; }
+  .header .header__logo__big {
+    font-family: "Butler Stencil Extra Bold";
+    font-size: 24px;
+    letter-spacing: 0.47em;
+    padding-bottom: 3px; }
+  .header .header__logo__small {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.58em; }
+  .header .header__browse__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.1em; }
+  .header .header__info__text {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.02em; }
+
+.footer {
+  height: 655px;
+  background-color: #f5f2ee;
+  position: relative; }
+  .footer .row {
+    padding: 105px 0 118px; }
+  .footer .footer__row__copyright {
+    padding: 0; }
+  .footer .col-4 {
+    padding: 0 20px; }
+  .footer .footer__col__list {
+    text-align: center;
+    border-right: 1px solid #ddccb8; }
+    .footer .footer__col__list a {
+      font-size: 16px;
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: -0.025em; }
+      .footer .footer__col__list a:hover {
+        cursor: pointer;
+        color: #a0765b; }
+    .footer .footer__col__list li {
+      padding-bottom: 1.3em;
+      margin-left: -131px; }
+    .footer .footer__col__list .uppercase {
+      font-size: 18px;
+      font-family: 'Lato', sans-serif;
+      letter-spacing: 0.19em; }
+  .footer .footer__col__title {
+    font-size: 28px;
+    font-family: "Butler bold";
+    text-transform: uppercase;
+    letter-spacing: 0.34em;
+    text-align: center; }
+  .footer .footer__col__list--second {
+    border: none; }
+  .footer .footer__col__text {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.89;
+    letter-spacing: -0.02em;
+    padding-top: 63px;
+    margin-left: -10px; }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer {
+      height: 555px; }
+      .footer .row {
+        padding: 105px 0 70px; }
+      .footer .footer__row__copyright {
+        padding: 0; }
+      .footer .col-4 {
+        padding: 0 15px; }
+        .footer .col-4:nth-child(3) {
+          border-left: 1px solid #ddccb8; }
+      .footer .footer__col__title {
+        font-size: 20px;
+        text-align: center; }
+      .footer .footer__col__text {
+        padding-top: 40px;
+        margin-left: 0;
+        font-size: 15px; }
+      .footer .footer__col__list li {
+        margin-left: 0;
+        padding-bottom: 1em; }
+      .footer .footer__col__list .uppercase {
+        font-size: 16px; } }
+  @media (max-width: 767px) {
+    .footer {
+      height: 800px; }
+      .footer .row {
+        padding: 33px 0; }
+      .footer .footer__row__copyright {
+        padding: 0; }
+      .footer .col-4 {
+        padding: 0;
+        border-bottom: 1px solid #ddccb8;
+        margin-bottom: 30px; }
+      .footer .footer__col__title {
+        font-size: 24px;
+        text-align: center; }
+      .footer .footer__col__list {
+        border-right: none; }
+        .footer .footer__col__list li {
+          margin-left: 0;
+          padding-bottom: 1em; }
+      .footer .footer__col__text {
+        margin-left: 0;
+        padding-top: 23px;
+        line-height: 1.8;
+        padding-bottom: 1em; } }
+
+.footer__copyright {
+  font-size: 16px;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0.01em; }
+  @media (max-width: 767px) {
+    .footer__copyright {
+      background-color: #f5f2ee; } }
+
+.footer__copyright__span {
+  font-family: 'Open Sans', sans-serif; }
+
+.footer__col__title--shifted {
+  margin-left: -115px; }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer__col__title--shifted {
+      margin-left: 0; } }
+  @media (max-width: 767px) {
+    .footer__col__title--shifted {
+      margin-left: 0; } }
+
+.footer__col__link--padded {
+  padding-top: 48px; }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer__col__link--padded {
+      padding-top: 34px; } }
+  @media (max-width: 767px) {
+    .footer__col__link--padded {
+      padding-top: 30px; } }
+
+.footer__col__title--second {
+  margin-left: 9px; }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer__col__title--second {
+      margin-left: 0; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer__col__title--second {
+      margin-left: 0; } }
+
+.footer__border__box {
+  margin: 0 auto;
+  top: 0;
+  width: 207px;
+  height: 10px;
+  background-color: #ddccb8; }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer__border__box {
+      width: 150px; } }
+
+.footer__col__content {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border-left: 1px solid #ddccb8; }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer__col__content {
+      border: none; }
+      .footer__col__content .footer__col__title {
+        margin-left: 0; } }
+  @media (max-width: 767px) {
+    .footer__col__content {
+      border-left: none; } }

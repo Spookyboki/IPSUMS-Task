@@ -6,11 +6,28 @@
   <title>IPSUMS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--build:css css/styles.min.css-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  
   <!--endbuild-->
 </head>
 <body>
   <header class="header">
+    <div class="wrapper header__wrapper">
+      <ul>
+        <li class="header__item header__logo">
+          <p class="header__logo__big blue uppercase">ipsums</p>
+          <p class="header__logo__small blue uppercase">dev test task</p>
+        </li>
+        <li class="header__item header__browse">
+          <p class="header__browse__text uppercase blue">browse products</p>
+        </li>
+        <li class="header__item header__info">
+          <p class="header__info__text brown">Company info <span></span></p>
+        </li>
+      </ul>
+    </div>
     
   </header>
   
@@ -19,7 +36,44 @@
   </section>
   
   <footer class="footer">
-    
+    <div class="footer__border__box"><span class="hide">border</span></div>
+    <div class="wrapper footer__wrapper">
+      <div class="row">
+        <div class="col-4 col-2-t col-1-m">
+          <h3 class="footer__col__title footer__col__title--shifted blue bolded">links</h3>
+          <ul class="footer__col__list">
+            <li class="footer__col__link--padded"><a href="javascript:;" class="blue uppercase">Company</a></li>
+            <li><a href="javascript:;" class="blue uppercase">Catalogs</a></li>
+            <li><a href="javascript:;" class="blue uppercase">Contact</a></li>
+            <li><a href="javascript:;" class="blue">Become a dealer</a></li>
+            <li><a href="javascript:;" class="blue">Find a dealer</a></li>
+            <li><a href="javascript:;" class="blue">Order forms</a></li>
+            <li><a href="javascript:;" class="blue">Login / Register</a></li>
+          </ul>
+        </div>
+        <div class="col-4 col-2-t col-1-m">
+          <div class="footer__col__list footer__col__list--second">
+            <h3 class="footer__col__title footer__col__title--second blue bolded">dev test</h3>
+            <p class="footer__col__text blue">Dev Test<br>1421 38<sup>th</sup> Brooklyn, NY<br>
+              11245-5647 USA<br><br>
+              (718= 633-2300<br>info@devtest.com</p>
+          </div>
+        </div>
+        <div class="col-4 col-2-t col-1-m">
+          <div class="footer__col__content">
+            <h3 class="footer__col__title blue bolded uppercase">newsletter</h3>
+            <a href="javascript:;"><span></span>email address<span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="row footer__row__copyright">
+        <div class="col-12 col-6-t col-1-m">
+          <p class="footer__copyright blue">
+            &copy; <span class="footer__copyright__span bolded uppercase">devtest</span> &mdash; 2019 All Right Reserved.
+          <p>
+        </div>
+      </div>
+    </div>
   </footer>
   <!--build:js js/main.min.js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

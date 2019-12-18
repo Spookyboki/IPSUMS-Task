@@ -1,5 +1,6 @@
 //Utilities
 // --------
+@import './utilities/fonts';
 @import './utilities/reset';
 @import './utilities/colors';
 @import './utilities/mixins';
@@ -13,6 +14,7 @@
 //Objects
 // --------
 @import './objects/links';
+@import './objects/text';
 
 //Layout
 // --------

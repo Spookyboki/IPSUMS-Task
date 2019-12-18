@@ -1,3 +1,46 @@
 .header {
-  
+  //height: 77px;
+  background-color: $white;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-items: center;
+  }
+
+  .header__logo {
+    display: inline-block;
+    padding-right: 47px;
+    //border-right: 1px solid $grey;
+    //padding: 20px 49px 20px 0;
+  }
+
+  .header__logo__big {
+    font-family: $font-butler-bolder;
+    font-size: 24px;
+    letter-spacing: 0.47em;
+    padding-bottom: 3px;
+  }
+
+  .header__logo__small {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.58em;
+  }
+
+  .header__browse {
+    //border-right: 1px solid $grey;
+  }
+
+  .header__browse__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  .header__info__text {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.02em;
+  }
 }

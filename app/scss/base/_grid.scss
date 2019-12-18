@@ -30,10 +30,10 @@
   }
 }
 
-$map: (1025: 12,768: 6 ,320: 1);
+$map: (1025: 12,768: 6 ,767: 1);
 
 @each $point , $columns in $map {
-  @if $point == 320 {
+  @if $point == 767 {
     @for $i from 1 through $columns {
       @media (max-width: $point + px) {
         $equ: 100% / ($columns)*$i;
