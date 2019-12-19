@@ -1,6 +1,10 @@
 $white: #fff;
 $grey: #f5f2ee;
 $blue: #304061;
+$light-blue: #7583a0;
+$gold: #c4ad6c;
+$light-grey: #9d9a97;
+$black: #333;
 
 $footer-link: #a0765b;
 $footer-border: #ddccb8;
@@ -17,4 +21,20 @@ $header-brown: #a9836b;
 
 .brown {
   color: $header-brown;
+}
+
+.gold {
+  color: $gold;
+}
+
+.light-grey {
+  color: $light-grey;
+}
+
+.black {
+  color: $black;
+}
+
+.light-blue {
+  color: $light-blue;
 }

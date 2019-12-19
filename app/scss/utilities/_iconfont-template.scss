@@ -1,4 +1,4 @@
-//sass-lint:disable-all
+//sass-lint:disable-block no-duplicate-properties
 @font-face {
   font-family: 'icons';
   src: url('../fonts/icons.eot');
@@ -36,11 +36,11 @@
   text-align: center;
 }
 
-.s-arrow-up:before {content: '\EA01'}
-.s-close:before {content: '\EA02'}
-.s-logo:before {content: '\EA03'}
-.s-magnify:before {content: '\EA04'}
-.s-menu:before {content: '\EA05'}
-.s-play:before {content: '\EA06'}
-.s-prev:before {content: '\EA07'}
-
+.s-close:before {content: '\EA01'}
+.s-dwon-arrow:before {content: '\EA02'}
+.s-envelope:before {content: '\EA03'}
+.s-hamburger:before {content: '\EA04'}
+.s-right-arrow:before {content: '\EA05'}
+.s-shopping-cart:before {content: '\EA06'}
+.s-user:before {content: '\EA07'}
+

@@ -13,25 +13,43 @@
   <!--endbuild-->
 </head>
 <body>
-  <header class="header">
+  <header class="header header__javascript">
     <div class="wrapper header__wrapper">
-      <ul>
-        <li class="header__item header__logo">
+      <div class="header__item header__logo">
+        <a href="javascript:;">
           <p class="header__logo__big blue uppercase">ipsums</p>
           <p class="header__logo__small blue uppercase">dev test task</p>
-        </li>
+        </a>
+      </div>
+      <div class="header__item header__logo__hamburger hamburger__javascript blue">
+        <span class="s s-hamburger header__drop__icon"><span class="hide">hide</span></span>
+      </div>
+      <ul class="header__item header__nav">
         <li class="header__item header__browse">
-          <p class="header__browse__text uppercase blue">browse products</p>
+          <a href="javascript:;">
+            <p class="header__browse__text uppercase blue">browse products</p>
+          </a>
         </li>
         <li class="header__item header__info">
-          <p class="header__info__text brown">Company info <span></span></p>
+          <a href="javascript:;">
+            <p class="header__info__text brown">Company info <span class="s s-dwon-arrow"><span class="hide">hide</span></span></p>
+          </a>
+        </li>
+        <li class="header__item header__shop__cart">
+          <span class="s s-shopping-cart brown"><span class="item__number white">2</span></span>
+          <p class="header__item header__item__total"><span class="light-blue total">Total:</span><br><span class="header__item__total__price brown">$11.800,00</span></p>
+        </li>
+        <li class="header__item header__company">
+          <a href="javascript:;">
+            <p class="header__company__name blue"><span class="s s-user brown"><span class="hide">hide</span></span>Company Name<span class="s s-dwon-arrow"><span class="hide">hide</span></span></p>
+          </a>
         </li>
       </ul>
     </div>
-    
   </header>
   
-  <section class="hero">
+  <section class="hero" style="background-image: url(images/hero-image.png);">
+    
    
   </section>
   
@@ -62,7 +80,7 @@
         <div class="col-4 col-2-t col-1-m">
           <div class="footer__col__content">
             <h3 class="footer__col__title blue bolded uppercase">newsletter</h3>
-            <a href="javascript:;"><span></span>email address<span></span></a>
+            <a class="footer__col__icon black uppercase" href="javascript:;"><span class="s s-envelope"><span class="hide">hide</span></span>email address<span class="s s-right-arrow"></span></a>
           </div>
         </div>
       </div>

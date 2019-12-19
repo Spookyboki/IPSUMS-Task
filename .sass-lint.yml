@@ -25,7 +25,7 @@ rules:
     - filename-extension: false
       leading-underscore: false
   empty-line-between-blocks:
-    - 1
+    - 0
     - ignore-single-line-rulesets: true
   extends-before-declarations: false
   extends-before-mixins: false

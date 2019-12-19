@@ -1,18 +1,32 @@
 .header {
-  //height: 77px;
   background-color: $white;
   width: 100%;
+  position: fixed;
+  transition: all 0.15s linear;
+
+  .header__wrapper {
+    display: flex;
+    padding: 0 211px 0 254px;
+  }
 
   ul {
     display: flex;
     justify-items: center;
+
+    li {
+      border-right: 1px solid $grey;
+      height: 78px;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
   }
 
   .header__logo {
+    padding-top: 20px;
     display: inline-block;
     padding-right: 47px;
-    //border-right: 1px solid $grey;
-    //padding: 20px 49px 20px 0;
   }
 
   .header__logo__big {
@@ -29,18 +43,241 @@
   }
 
   .header__browse {
-    //border-right: 1px solid $grey;
+    padding-left: 35px;
+    display: flex;
+    align-items: center;
   }
 
   .header__browse__text {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     letter-spacing: 0.1em;
+    padding-right: 33px;
+  }
+
+  .header__info {
+    padding-left: 35px;
+    padding-right: 328px;
+    display: flex;
+    align-items: center;
   }
 
   .header__info__text {
     font-size: 16px;
     font-family: 'Lato', sans-serif;
     letter-spacing: 0.02em;
+    .s-dwon-arrow {
+      font-size: 8px;
+      padding-left: 7px;
+    }
   }
+
+  .header__shop__cart {
+    display: flex;
+    align-items: center;
+    padding: 0 29px 0 33px;
+  }
+
+  .s-shopping-cart {
+    font-size: 18px;
+    position: relative;
+    padding-right: 43px;
+
+    .item__number {
+      background-color: $blue;
+      border-radius: 50%;
+      padding: 4px 7px;
+      font-size: 10px;
+      position: absolute;
+      left: 10px;
+      top: -9px;
+    }
+  }
+
+  .header__item__total {
+    float: right;
+    line-height: 18px;
+    padding-bottom: 4px;
+  }
+
+  .total {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+  }
+
+  .total,
+  .header__item__total__price {
+    font-family: 'Lato', sans-serif;
+  }
+
+  .header__item__total__price {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .header__company {
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+
+    .s-user {
+      font-weight: bold;
+      font-size: 25px;
+      padding-right: 12px;
+    }
+
+    .s-dwon-arrow {
+      font-size: 11px;
+      padding-left: 14px;
+    }
+
+    .header__company__name {
+      display: flex;
+      align-items: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  .header__logo__hamburger {
+    display: none;
+  }
+
+  .s-close {
+    display: none;
+  }
+
+  @media screen and (max-width: 1694px) {
+
+    position: fixed;
+    transition: all 0.15s linear;
+
+    .header__wrapper {
+      padding: 0 211px 0 254px;
+    }
+    
+    .header__info {
+      padding-right: 35px;
+    }
+
+    .header__logo__hamburger {
+      display: none;
+    }
+
+    .s-close {
+      display: none;
+    }
+  
+  }
+
+  @media screen and (max-width: 1394px) {
+    position: fixed;
+    transition: all 0.15s linear;
+    
+    .header__wrapper {
+      padding: 0 60px;
+    }
+
+    .s-close {
+      display: block;
+      top: 15px;
+      font-size: 30px;
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  
+    .header__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+
+    .header__logo {
+      padding-top: 0;
+    }
+    
+    ul {
+      display: none;
+      position: absolute;
+      top: 77px;
+      left: 0;
+      width: 100%;
+      background-color: $white;
+      z-index: 5;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 250px;
+      box-shadow: -1px -1px 7px 0px $grey;
+
+      li {
+        border-right: none;
+      }
+    }
+
+    .header__browse {
+      padding-left: 0;
+    }
+
+    .header__browse__text {
+      padding-right: 0;
+    }
+
+    .header__logo__hamburger {
+      display: block;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .header__info {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .header__company,
+    .header__shop__cart,
+    .header__info,
+    .header__logo__hamburger,
+    .header__browse {
+      justify-content: center;
+      border-bottom: 1px solid $grey;
+    }
+  }
+
+  @include breakpoint (tablet) {
+
+    position: fixed;
+    transition: all 0.15s linear;
+
+    .header__wrapper {
+      padding: 0 22px;
+    }
+  }
+
+  @include breakpoint (phone) {
+
+    position: fixed;
+    transition: all 0.15s linear;
+
+    .header__wrapper {
+      padding: 0 20px;
+    }
+
+    ul {
+      padding: 0;
+    }
+  }
+}
+
+.nav__show {
+  display: block !important;
+}
+
+.active {
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
