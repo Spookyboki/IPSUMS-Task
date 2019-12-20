@@ -1,8 +1,11 @@
+//sass-lint:disable-block no-mergeable-selectors
+
 .header {
   background-color: $white;
   width: 100%;
   position: fixed;
   transition: all 0.15s linear;
+  z-index: 2;
 
   .header__wrapper {
     display: flex;
@@ -270,6 +273,10 @@
 
     ul {
       padding: 0;
+    }
+
+    .header__company {
+      padding-left: 0;
     }
   }
 }
