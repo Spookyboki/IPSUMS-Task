@@ -2,9 +2,13 @@
 
 $('document').ready(function(){
 
+  //Slick
+
   $('.slider').slick({
     
   })
+
+  //Header
 
   var hamburgerIcon = $('.hamburger__javascript');
   var dropNav = $('.header__nav');
@@ -39,6 +43,8 @@ $('document').ready(function(){
       header.removeClass('active');
     }
   })
+
+  //Hero-slider
 
   var nextBtn = $('.slick-next');
   var prevBtn = $('.slick-prev')
@@ -90,4 +96,60 @@ $('document').ready(function(){
   prevBtn.on('click', function() {
     current = current.prev();
   })
+
+  //Timeline
+
+  var timelineTextBoxEven = $(".timeline__text__box:even");
+  var timelineTextBoxOdd = $(".timeline__text__box:odd");
+
+  timelineTextBoxEven.mouseover(function() {
+    for (let i = 0 ; i < timelineTextBoxEven.length; i++) {
+      var text = $(this).find('.timeline__text');
+      text.css({'display':'block'});
+      $(this).css({'transform':'translateY(-156%)','left':'45%'});
+
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        $(this).css({'left':'25%'});
+      }
+    }
+  })
+
+  timelineTextBoxEven.mouseout(function() {
+    for (let i = 0 ; i < timelineTextBoxEven.length; i++) {
+      var text = $(this).find('.timeline__text');
+      text.css({'display':'none'});
+      $(this).css({'transform':'translateY(-127%)'})
+    }
+  })
+
+  timelineTextBoxOdd.mouseover(function() {
+    for (let i = 0 ; i < timelineTextBoxOdd.length; i++) {
+      var text = $(this).find('.timeline__text');
+      text.css({'display':'block'});
+    }
+  })
+
+  timelineTextBoxOdd.mouseout(function() {
+    for (let i = 0 ; i < timelineTextBoxOdd.length; i++) {
+      var text = $(this).find('.timeline__text');
+      text.css({'display':'none'});
+    }
+  })
+
+
+  //Accordion
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+    this.classList.toggle("opened");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+  }
 });

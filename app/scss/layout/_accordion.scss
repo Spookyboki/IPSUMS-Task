@@ -1,0 +1,93 @@
+.accordion {
+	background-color: $white;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+  transition: 0.4s;
+
+  ul {
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+  }
+
+  .s-empty-star {
+    font-size: 12px;
+    padding-right: 40px;
+  }
+
+  .accordion__brand {
+    width: 306px;
+  }
+
+  .accordion__brand__name {
+    line-height: 22px;
+    padding-right: 143px;
+  }
+
+  .brand__name {
+    font-size: 18px;
+    letter-spacing: 0.07em;
+  }
+
+  .brand__sub__name {
+    font-size: 16px;
+  }
+
+  .accordion__item__tag {
+    padding-top: 5px;
+    letter-spacing: -0.02em;
+    padding-right: 157px;
+  }
+
+  .accordion__item__listing {
+    padding-top: 5px;
+    padding-right: 107px;
+  }
+
+  .accordion__item__wholesale {
+    padding-right: 107px;
+    padding-top: 5px;
+  }
+
+  .accordion__item__listing,
+  .brand__sub__name,
+  .brand__name,
+  .item__tag,
+  .accordion__item__wholesale {
+    font-family: 'Lato', 'Sans serif';
+  }
+
+  .accordion__image {
+    padding-right: 48px;
+    padding-top: 2px;
+
+    img {
+      height: 63px;
+    }
+  }
+
+  .accordion__item__btn {
+    
+    button {
+      display: block;
+    }
+  }
+  
+  .opened {
+    background-color: $grey;
+  }
+}
+
+
+.panel {
+	padding: 0 18px;
+	display: none;
+	background-color: $white;
+	overflow: hidden;
+}
