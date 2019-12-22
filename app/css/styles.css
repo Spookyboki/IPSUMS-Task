@@ -333,6 +333,9 @@ textarea {
 .brown {
   color: #a9836b; }
 
+.light-brown {
+  color: #ebe0d4; }
+
 .gold {
   color: #c4ad6c; }
 
@@ -344,6 +347,9 @@ textarea {
 
 .light-blue {
   color: #7583a0; }
+
+.orange {
+  color: #d47517; }
 
 @font-face {
   font-family: 'icons';
@@ -412,17 +418,23 @@ textarea {
 .s-right-arrow:before {
   content: '\EA0A'; }
 
-.s-shopping-cart:before {
+.s-search:before {
   content: '\EA0B'; }
 
-.s-timeline-left:before {
+.s-shopping-cart:before {
   content: '\EA0C'; }
 
-.s-timeline-right:before {
+.s-timeline-left:before {
   content: '\EA0D'; }
 
-.s-user:before {
+.s-timeline-right:before {
   content: '\EA0E'; }
+
+.s-up-arrow:before {
+  content: '\EA0F'; }
+
+.s-user:before {
+  content: '\EA10'; }
 
 .wrapper {
   max-width: 1920px;
@@ -1148,53 +1160,94 @@ a {
   background-color: #fff;
   color: #444;
   cursor: pointer;
-  padding: 18px;
+  padding: 15px 18px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
   transition: 0.4s; }
-  .accordion ul {
+  .accordion .row {
+    align-items: center; }
+  .accordion .listing__star__img__name {
     display: flex;
-    align-items: center;
-    padding-left: 35px; }
+    align-items: center; }
   .accordion .s-empty-star {
     font-size: 12px;
     padding-right: 40px; }
-  .accordion .accordion__brand {
-    width: 306px; }
   .accordion .accordion__brand__name {
-    line-height: 22px;
-    padding-right: 143px; }
+    line-height: 22px; }
   .accordion .brand__name {
     font-size: 18px;
     letter-spacing: 0.07em; }
   .accordion .brand__sub__name {
     font-size: 16px; }
   .accordion .accordion__item__tag {
-    padding-top: 5px;
-    letter-spacing: -0.02em;
-    padding-right: 157px; }
-  .accordion .accordion__item__listing {
-    padding-top: 5px;
-    padding-right: 107px; }
-  .accordion .accordion__item__wholesale {
-    padding-right: 107px;
-    padding-top: 5px; }
+    letter-spacing: -0.02em; }
   .accordion .accordion__item__listing,
   .accordion .brand__sub__name,
   .accordion .brand__name,
   .accordion .item__tag,
-  .accordion .accordion__item__wholesale {
+  .accordion .accordion__item__wholesale,
+  .accordion .item__text,
+  .accordion .qty__number {
     font-family: 'Lato', 'Sans serif'; }
-  .accordion .accordion__image {
-    padding-right: 48px;
-    padding-top: 2px; }
-    .accordion .accordion__image img {
-      height: 63px; }
-  .accordion .accordion__item__btn button {
+  .accordion .item__tag,
+  .accordion .accordion__item__wholesale,
+  .accordion .accordion__item__listing {
+    padding-top: 5px; }
+  .accordion .item__tag {
+    margin-left: -28px; }
+  .accordion .item__listing {
+    margin-left: -23px; }
+  .accordion .accordion__img {
+    height: 63px;
+    padding-right: 47px; }
+  .accordion .accordion__item__wholesale {
+    margin-left: 32px; }
+  .accordion .accordion__item__qty {
+    margin-left: -44px;
+    padding-top: 19px; }
+  .accordion .qty__number {
+    font-size: 16px;
+    margin-bottom: -16px;
+    padding-right: 8px; }
+  .accordion .qty__arrows {
+    display: inline-grid;
+    font-size: 7px;
+    transform: translateY(-10px); }
+  .accordion .s-dwon-arrow {
     display: block; }
+  .accordion .s-up-arrow {
+    padding-bottom: 5px; }
+  .accordion .accordion__item__btn {
+    position: relative; }
+    .accordion .accordion__item__btn .s-dwon-arrow {
+      position: absolute;
+      right: 63px;
+      top: 24px;
+      font-size: 9px; }
+    .accordion .accordion__item__btn .item__text {
+      font-size: 12px;
+      display: block;
+      transform: translateY(-1px); }
+    .accordion .accordion__item__btn .important__notice {
+      background-color: #d47517;
+      padding: 2.5px 5.5px;
+      border-radius: 50%;
+      font-size: 9px;
+      margin-right: 6px;
+      margin-left: 11px; }
+    .accordion .accordion__item__btn .item__btn {
+      display: block;
+      background-color: #304061;
+      font-size: 16px;
+      font-family: 'Lato', 'Sans serif';
+      width: 136px;
+      height: 50px;
+      letter-spacing: 0.26em;
+      margin-left: -12px;
+      margin-top: 5px; }
   .accordion .opened {
     background-color: #f5f2ee; }
 
@@ -1203,6 +1256,38 @@ a {
   display: none;
   background-color: #fff;
   overflow: hidden; }
+
+.search__select__box {
+  background-color: #f5f2ee; }
+  .search__select__box .wrapper__search__select {
+    padding: 0px 253px 0px 257px; }
+  .search__select__box .search__select__item {
+    padding-top: 32px;
+    width: 100%;
+    position: relative; }
+    .search__select__box .search__select__item .search__select__input {
+      width: 94%;
+      padding: 10px 44px;
+      border: 1px solid #ebe0d4;
+      color: #a9836b;
+      margin-bottom: 20px; }
+      .search__select__box .search__select__item .search__select__input::placeholder {
+        color: #ebe0d4; }
+    .search__select__box .search__select__item .s-search {
+      position: absolute;
+      left: 19px;
+      top: 45px; }
+
+.listing {
+  border-bottom: 5px solid #304061;
+  padding-bottom: 61px; }
+
+.select__box {
+  padding-bottom: 30px; }
+  .select__box .listing__select {
+    width: 100%;
+    border: 1px solid #ebe0d4;
+    padding: 11px 8px; }
 
 .footer {
   height: 655px;

@@ -5,11 +5,14 @@ $light-blue: #7583a0;
 $gold: #c4ad6c;
 $light-grey: #9d9a97;
 $black: #333;
+$orange: #d47517;
 
 $footer-link: #a0765b;
 $footer-border: #ddccb8;
 
 $header-brown: #a9836b;
+
+$light-brown: #ebe0d4;
 
 .white {
   color: $white;
@@ -21,6 +24,10 @@ $header-brown: #a9836b;
 
 .brown {
   color: $header-brown;
+}
+
+.light-brown {
+  color: $light-brown;
 }
 
 .gold {
@@ -37,4 +44,8 @@ $header-brown: #a9836b;
 
 .light-blue {
   color: $light-blue;
+}
+
+.orange {
+  color: $orange;
 }
