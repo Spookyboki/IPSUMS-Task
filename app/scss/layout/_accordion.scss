@@ -19,7 +19,8 @@
     align-items: center;
   }
 
-  .s-empty-star {
+  .s-empty-star,
+  .s-full-star {
     font-size: 12px;
     padding-right: 40px;
   }
@@ -103,12 +104,12 @@
   .accordion__item__btn {
 
     position: relative;
+    display: flex;
+    align-items: center;
 
     .s-dwon-arrow {
-      position: absolute;
-      right: 63px;
-      top: 24px;
       font-size: 9px;
+      padding-left: 31px;
     }
     
     .item__text {
@@ -138,17 +139,90 @@
       margin-top: 5px;
     }
   }
-  
-  .opened {
-    background-color: $grey;
-  }
 }
 
 .panel {
-	padding: 0 18px;
+	padding: 22px 18px;;
 	display: none;
 	background-color: $white;
-	overflow: hidden;
+  overflow: hidden;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $footer-border;
+  border-left: 1px solid $footer-border;
+  border-right: 1px solid $footer-border;
+
+  .panel__icons {
+    display: flex;
+    align-items: center;
+    margin-left: 59px;
+
+    img {
+      padding-right: 14px;
+      margin-top: 2px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .panel__color {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-left: -35px;
+      margin-top: 4px;
+    }
+
+    .circle {
+      background-color: $black;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+  }
+  
+  .panel__item {
+    font-size: 14px;
+    font-family: 'Lato', 'Sans serif';
+    letter-spacing: 0.03em;
+  }
+
+  .panel__band {
+    margin-left: -84px;
+    margin-top: 7px;
+  }
+
+  .panel__case {
+    padding-left: 49px;
+    margin-top: 7px;
+  }
+
+  .panel__features {
+    margin: 5px 0;
+    display: flex;
+    align-self: center;
+
+    p {
+      padding-right: 170px;
+    }
+
+    .s-link {
+      font-size: 14px;
+      padding-left: 5px;
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .panel__case,
+  .panel__features {
+    letter-spacing: 0.001em;
+  }
 }
 
 .search__select__box {
@@ -186,15 +260,111 @@
 .listing {
   border-bottom: 5px solid $blue;
   padding-bottom: 61px;
+  position: relative;
+
+  .listing__cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 417px;
+    background-color: $white;
+    border: 1px solid $footer-border;
+    z-index: 5;
+  }
+
+  .listing__cart__box {
+    overflow-y: scroll;
+  }
+
+  .item {
+    
+    .s-close {
+      cursor: pointer;
+    }
+  }
+}
+
+.listing__wrapper {
+  padding: 0 207px 0 273px;
 }
 
 .select__box {
 
   padding-bottom: 30px;
+  margin-bottom: 32px;
 
   .listing__select {
     width: 100%;
     border: 1px solid $light-brown;
     padding: 11px 8px;
   }
+}
+
+.wrapper__choices {
+  padding: 0px 274px;
+}
+
+.choice {
+  color: $header-brown;
+  position: relative;
+  margin-right: 22px;
+  border: 1px solid $header-brown;
+  padding: 10px 20px;
+  border-radius: 22px;
+  font-family: 'Lato', 'Sans serif';
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  width: 153px;
+
+  .s-close {
+    position: absolute;
+    right: 19px;
+    padding-left: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.accordion__col__names {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $footer-border;
+  margin-bottom: 2px;
+  padding: 41px 0 13px 67px;
+
+  .accordion__name {
+    font-family: 'Lato', 'Sans serif';
+    font-size: 16px;
+    letter-spacing: 0.03em;
+  }
+
+  .accordion__name--double {
+    display: flex;
+    align-items: center;
+  }
+
+  .accordion__name__brand {
+    padding-left: 47px;
+  }
+
+  .accordion__name__item__no {
+    margin-left: -67px;
+  }
+
+  .accordion__name__listing {
+    margin-left: -40px;
+  }
+
+  .accordion__name__wholesale {
+    text-align: right;
+    padding-right: 15px;
+  }
+
+  .accordion__name__qty {
+    margin-left: 70px;
+  }
+
 }

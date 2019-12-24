@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <!--endbuild-->
 </head>
 <body>
@@ -36,6 +36,23 @@
           </a>
         </li>
         <li class="header__item header__shop__cart">
+          <div class="arrow__box">
+            <div class="item__added">
+              <div class="item__img__title">
+                <img src="./images/watch1.png" alt="item added">
+                <div class="title">
+                  <p class="title__brand__name accordion__brand__name"><span class="title__name brand__name blue uppercase bolded">alfred sung</span><br><span class="title__sub__name brand__sub__name brown">Slim Collection Series 5</span></p>
+                </div>
+              </div>
+              <div class="item__code">
+                <p class="item__tag blue uppercase">as7104sl-1a</p>
+              </div>
+              <a href="javascript:;"><span class="s s-close"><span class="hide">hide</span></span></a>
+            </div>
+            <div class="item__added__msg">
+              <p class="blue">Has been successfully added to your cart!</p>
+            </div>
+          </div>
           <span class="s s-shopping-cart brown"><span class="item__number white">2</span></span>
           <p class="header__item header__item__total"><span class="light-blue total">Total:</span><br><span class="header__item__total__price brown">$11.800,00</span></p>
         </li>
@@ -108,6 +125,29 @@
     </div>
   </section>
   <section class="listing">
+    <div class="listing__cart">
+      <div class="listing__cart__title">
+        <h2 class="title blue">My Cart</h2>
+      </div>
+      <div class="listing__cart__box">
+        <div class="item">
+          <span class="s s-close"><span class="hide">hide</span></span>
+          <p class="item__brand__name accordion__brand__name"><span class="brand__name blue uppercase bolded">alfred sung</span><br><span class="item__ brand__sub__name brand__sub__name brown">Slim Collection Series 5</span></p>
+          <div class="item__price">
+            $3,700.00
+          </div>
+          <div class="item__qty">
+            <span class="number">4</span>
+            <span>
+              <span class="s s-up-arrow"><span class="hide">hide</span></span>
+              <span class="s s-dwon-arrow"><span class="hide">hide</span></span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
     <div class="search__select__box">
       <div class="wrapper wrapper__search__select">
         <form action="POST" class="listing__form">
@@ -118,63 +158,99 @@
           <div class="row select__box">
             <div class="col-2">
               <select class="listing__select brown">
-                <option>Brand</option>
-                <option value="garmin">Garmin</option>
-                <option value="g-shock">G-Shock</option>
-                <option value="wrangler">Wrangler</option>
-                <option value="alfred-sung">Alfred sung</option>
+                <option value="" disabled selected>Brand</option>
+                <option value="Garmin">Garmin</option>
+                <option value="G-Shock">G-Shock</option>
+                <option value="Wrangler">Wrangler</option>
+                <option value="Alfred-Sung">Alfred sung</option>
               </select>
             </div>
             <div class="col-2">
               <select class="listing__select brown">
-                <option>Colours</option>
-                <option value="blue">Blue</option>
-                <option value="yellow">Yellow</option>
-                <option value="aqua">Aqua</option>
-                <option value="purple">Purple</option>
+                <option value="" disabled selected>Colours</option>
+                <option value="Blue">Blue</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Aqua">Aqua</option>
+                <option value="Purple">Purple</option>
               </select>
             </div>
             <div class="col-2">
               <select class="listing__select brown">
-                <option>Material</option>
-                <option value="leather">Leather</option>
-                <option value="plastic">Plastic</option>
-                <option value="fake-leather">Fake leather</option>
-                <option value="metal">Metal</option>
+                <option value="" disabled selected>Material</option>
+                <option value="Leather">Leather</option>
+                <option value="Plastic">Plastic</option>
+                <option value="Fake-leather">Fake leather</option>
+                <option value="Metal">Metal</option>
               </select>
             </div>
             <div class="col-2">
               <select class="listing__select brown">
-                <option>Features</option>
-                <option value="gps">GPS</option>
-                <option value="waterproof">Waterproof</option>
-                <option value="calorie-tracker">Calorie tracker</option>
-                <option value="alarm">Alarm</option>
+                <option value="" disabled selected>Features</option>
+                <option value="GPS">GPS</option>
+                <option value="Waterproof">Waterproof</option>
+                <option value="Alarm">Alarm</option>
               </select>
             </div>
             <div class="col-2">
               <select class="listing__select brown">
-                <option>Price</option>
-                <option value="one-to-two">$1000 - $2000</option>
-                <option value="two-to-three">$2000 - $3000</option>
-                <option value="three-to-four">$3000 - $4000</option>
-                <option value="four-to-five">$4000 - $5000</option>
+                <option value="" disabled selected>Price</option>
+                <option value="One-to-two">$1000-$2000</option>
+                <option value="Two-to-three">$2000-$3000</option>
+                <option value="Three-to-four">$3000-$4000</option>
+                <option value="Four-to-five">$4000-$5000</option>
               </select>
             </div>
             <div class="col-2">
               <select class="listing__select brown">
-                <option>Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
+                <option value="" disabled selected>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
               </select>
             </div>
           </div>
         </form>
       </div>
     </div>
+    <div class="choices choices__box">
+      <div class="wrapper wrapper__choices">
+        <div class="row choices__appear">
+          <span class="hide">hidden</span>
+        </div>
+      </div>
+    </div>
     <div class="wrapper listing__wrapper">
       <div class="listing__accordion accordion-container">
+        <div class="row accordion__col__names">
+          <div class="col-4 accordion__name accordion__name--double">
+            <p class="accordion__name__image light-blue">
+              Image
+            </p>
+            <p class="accordion__name__brand light-blue">
+              Brand
+            </p>
+          </div>
+          <div class="col-2 accordion__name">
+            <p class="accordion__name__item__no light-blue">
+              Item No.
+            </p>
+          </div>
+          <div class="clo-1 accordion__name">
+            <p class="accordion__name__listing light-blue">
+              Listing
+            </p>
+          </div>
+          <div class="col-2 accordion__name">
+            <p class="accordion__name__wholesale light-blue">
+              Wholesale
+            </p>
+          </div>
+          <div class="col-3 accordion__name">
+            <p class="accordion__name__qty light-blue">
+              QTY
+            </p>
+          </div>
+        </div>
         <div class="accordion">
           <div class="row">
             <div class="col-4 accordion__item listing__star__img__name">
@@ -199,14 +275,34 @@
               </span>
             </div>
             <div class="col-2 accordion__item__btn">
-              <span class="item__text orange bolded"><span class="important__notice white">i</span>Low on stock</span>
+              <!-- <span class="item__text orange bolded"><span class="important__notice white">i</span>Low on stock</span> -->
               <button class="item__btn uppercase white">add <span class="s s-shopping-cart white"><span class="hide">hidden</span></span></button>
               <span class="s s-dwon-arrow brown"><span class="hide">hidden</span></span>
             </div>
           </div>
         </div>
         <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="row">
+            <div class="col-2 panel__item panel__icons">
+              <a data-fancybox="gallery" href="./images/big-img1.png"><img src="./images/icon1.png" alt="front view"></a>
+              <a data-fancybox="gallery" href="./images/big-img2.png"><img src="./images/icon2.png" alt="belt"></a>
+              <a data-fancybox="gallery" href="./images/big-img3.png"><img src="./images/icon3.png" alt="back view"></a>
+              <a data-fancybox="gallery" href="./images/big-img4.png"><img src="./images/icon4.png" alt="side view"></a>
+            </div>
+            <div class="col-2 panel__item panel__color">
+              <p class="light-blue">Color:Black</p><div class="circle"><span class="hide"></span></div>
+            </div>
+            <div class="col-1 panel__item panel__band">
+              <p class="light-blue">Band:Solid</p>
+            </div>
+            <div class="col-3 panel__item panel__case">
+              <p class="light-blue">Case / bezel material: Titanium / Cobarion</p>
+            </div>
+            <div class="col-4 panel__item panel__features">
+              <p class="light-blue">Features:GPS, Waterproof, Bluetooth</p>
+              <a href="https://www.forwardslashny.com/" target="_blank"><span class="s s-link brown"><span class="hide">hidden</span></span></a>
+            </div>
+          </div>
         </div>
         <div class="accordion">
           <div class="row">
@@ -238,7 +334,27 @@
           </div>
         </div>
         <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="row">
+            <div class="col-2 panel__item panel__icons">
+              <a data-fancybox="gallery" href="./images/big-img1.png"><img src="./images/icon1.png" alt="front view"></a>
+              <a data-fancybox="gallery" href="./images/big-img2.png"><img src="./images/icon2.png" alt="belt"></a>
+              <a data-fancybox="gallery" href="./images/big-img3.png"><img src="./images/icon3.png" alt="back view"></a>
+              <a data-fancybox="gallery" href="./images/big-img4.png"><img src="./images/icon4.png" alt="side view"></a>
+            </div>
+            <div class="col-2 panel__item panel__color">
+              <p class="light-blue">Color:Black</p><div class="circle"><span class="hide"></span></div>
+            </div>
+            <div class="col-1 panel__item panel__band">
+              <p class="light-blue">Band:Solid</p>
+            </div>
+            <div class="col-3 panel__item panel__case">
+              <p class="light-blue">Case / bezel material: Titanium / Cobarion</p>
+            </div>
+            <div class="col-4 panel__item panel__features">
+              <p class="light-blue">Features:GPS, Waterproof, Bluetooth</p>
+              <a href="https://www.forwardslashny.com/" target="_blank"><span class="s s-link brown"><span class="hide">hidden</span></span></a>
+            </div>
+          </div>
         </div>
         <div class="accordion">
           <div class="row">
@@ -270,104 +386,184 @@
           </div>
         </div>
         <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
-      <div class="accordion">
-        <div class="row">
-          <div class="col-4 accordion__item listing__star__img__name">
-            <span class="s s-empty-star brown bolded"><span class="hide">hidden</span></span>
-            <img class="accordion__img" src="./images/watch3.png" alt="Alfred Sung Slim collection series 5">
-            <p class="accordion__brand__name"><span class="brand__name blue uppercase bolded">wrangler</span><br><span class="brand__sub__name brown">Western Collection</span></p>
-          </div>
-          <div class="col-2 accordion__item__tag">
-            <p class="item__tag blue uppercase bolded">as7494sl-8r</p>
-          </div>
-          <div class="col-1 accordion__item__listing">
-            <p class="item__listing brown">$5,600.00</p>
-          </div>
-          <div class="col-2 accordion__item__wholesale">
-            <p class="item__wholesale brown">$5,200.00</p>
-          </div>
-          <div class="col-1 accordion__item__qty brown">
-            <span class="qty__number bolded">0</span>
-            <span class="qty__arrows">
-              <span class="s s-up-arrow"><span class="hide">hide</span></span>
-              <span class="s s-dwon-arrow"><span class="hide">hide</span></span>
-            </span>
-          </div>
-          <div class="col-2 accordion__item__btn">
-            <button class="item__btn uppercase white">add <span class="s s-shopping-cart white"><span class="hide">hidden</span></span></button>
-            <span class="s s-dwon-arrow brown"><span class="hide">hidden</span></span>
+          <div class="row">
+            <div class="col-2 panel__item panel__icons">
+              <a data-fancybox="gallery" href="./images/big-img1.png"><img src="./images/icon1.png" alt="front view"></a>
+              <a data-fancybox="gallery" href="./images/big-img2.png"><img src="./images/icon2.png" alt="belt"></a>
+              <a data-fancybox="gallery" href="./images/big-img3.png"><img src="./images/icon3.png" alt="back view"></a>
+              <a data-fancybox="gallery" href="./images/big-img4.png"><img src="./images/icon4.png" alt="side view"></a>
+            </div>
+            <div class="col-2 panel__item panel__color">
+              <p class="light-blue">Color:Black</p><div class="circle"><span class="hide"></span></div>
+            </div>
+            <div class="col-1 panel__item panel__band">
+              <p class="light-blue">Band:Solid</p>
+            </div>
+            <div class="col-3 panel__item panel__case">
+              <p class="light-blue">Case / bezel material: Titanium / Cobarion</p>
+            </div>
+            <div class="col-4 panel__item panel__features">
+              <p class="light-blue">Features:GPS, Waterproof, Bluetooth</p>
+              <a href="https://www.forwardslashny.com/" target="_blank"><span class="s s-link brown"><span class="hide">hidden</span></span></a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-      <div class="accordion">
-        <div class="row">
-          <div class="col-4 accordion__item listing__star__img__name">
-            <span class="s s-empty-star brown bolded"><span class="hide">hidden</span></span>
-            <img class="accordion__img" src="./images/watch1.png" alt="Alfred Sung Slim collection series 5">
-            <p class="accordion__brand__name"><span class="brand__name blue uppercase bolded">alfred sung</span><br><span class="brand__sub__name brown">Slim Collection Series 5</span></p>
-          </div>
-          <div class="col-2 accordion__item__tag">
-            <p class="item__tag blue uppercase bolded">as7104sl-1a</p>
-          </div>
-          <div class="col-1 accordion__item__listing">
-            <p class="item__listing brown">$3,700.00</p>
-          </div>
-          <div class="col-2 accordion__item__wholesale">
-            <p class="item__wholesale brown">$3,700.00</p>
-          </div>
-          <div class="col-1 accordion__item__qty brown">
-            <span class="qty__number bolded">0</span>
-            <span class="qty__arrows">
-              <span class="s s-up-arrow"><span class="hide">hide</span></span>
-              <span class="s s-dwon-arrow"><span class="hide">hide</span></span>
-            </span>
-          </div>
-          <div class="col-2 accordion__item__btn">
-            <button class="item__btn uppercase white">add <span class="s s-shopping-cart white"><span class="hide">hidden</span></span></button>
-            <span class="s s-dwon-arrow brown"><span class="hide">hidden</span></span>
+        <div class="accordion">
+          <div class="row">
+            <div class="col-4 accordion__item listing__star__img__name">
+              <span class="s s-empty-star brown bolded"><span class="hide">hidden</span></span>
+              <img class="accordion__img" src="./images/watch3.png" alt="Alfred Sung Slim collection series 5">
+              <p class="accordion__brand__name"><span class="brand__name blue uppercase bolded">wrangler</span><br><span class="brand__sub__name brown">Western Collection</span></p>
+            </div>
+            <div class="col-2 accordion__item__tag">
+              <p class="item__tag blue uppercase bolded">as7494sl-8r</p>
+            </div>
+            <div class="col-1 accordion__item__listing">
+              <p class="item__listing brown">$5,600.00</p>
+            </div>
+            <div class="col-2 accordion__item__wholesale">
+              <p class="item__wholesale brown">$5,200.00</p>
+            </div>
+            <div class="col-1 accordion__item__qty brown">
+              <span class="qty__number bolded">0</span>
+              <span class="qty__arrows">
+                <span class="s s-up-arrow"><span class="hide">hide</span></span>
+                <span class="s s-dwon-arrow"><span class="hide">hide</span></span>
+              </span>
+            </div>
+            <div class="col-2 accordion__item__btn">
+              <button class="item__btn uppercase white">add <span class="s s-shopping-cart white"><span class="hide">hidden</span></span></button>
+              <span class="s s-dwon-arrow brown"><span class="hide">hidden</span></span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-      <div class="accordion">
-        <div class="row">
-          <div class="col-4 accordion__item listing__star__img__name">
-            <span class="s s-empty-star brown bolded"><span class="hide">hidden</span></span>
-            <img class="accordion__img" src="./images/watch1.png" alt="Alfred Sung Slim collection series 5">
-            <p class="accordion__brand__name"><span class="brand__name blue uppercase bolded">garmin</span><br><span class="brand__sub__name brown">Classic Collection Series 6</span></p>
-          </div>
-          <div class="col-2 accordion__item__tag">
-            <p class="item__tag blue uppercase bolded">as2e0g8e-2u</p>
-          </div>
-          <div class="col-1 accordion__item__listing">
-            <p class="item__listing brown">$2,100.00</p>
-          </div>
-          <div class="col-2 accordion__item__wholesale">
-            <p class="item__wholesale brown">$2,000.00</p>
-          </div>
-          <div class="col-1 accordion__item__qty brown">
-            <span class="qty__number bolded">0</span>
-            <span class="qty__arrows">
-              <span class="s s-up-arrow"><span class="hide">hide</span></span>
-              <span class="s s-dwon-arrow"><span class="hide">hide</span></span>
-            </span>
-          </div>
-          <div class="col-2 accordion__item__btn">
-            <button class="item__btn uppercase white">add <span class="s s-shopping-cart white"><span class="hide">hidden</span></span></button>
-            <span class="s s-dwon-arrow brown"><span class="hide">hidden</span></span>
+        <div class="panel">
+          <div class="row">
+            <div class="col-2 panel__item panel__icons">
+              <a data-fancybox="gallery" href="./images/big-img1.png"><img src="./images/icon1.png" alt="front view"></a>
+              <a data-fancybox="gallery" href="./images/big-img2.png"><img src="./images/icon2.png" alt="belt"></a>
+              <a data-fancybox="gallery" href="./images/big-img3.png"><img src="./images/icon3.png" alt="back view"></a>
+              <a data-fancybox="gallery" href="./images/big-img4.png"><img src="./images/icon4.png" alt="side view"></a>
+            </div>
+            <div class="col-2 panel__item panel__color">
+              <p class="light-blue">Color:Black</p><div class="circle"><span class="hide"></span></div>
+            </div>
+            <div class="col-1 panel__item panel__band">
+              <p class="light-blue">Band:Solid</p>
+            </div>
+            <div class="col-3 panel__item panel__case">
+              <p class="light-blue">Case / bezel material: Titanium / Cobarion</p>
+            </div>
+            <div class="col-4 panel__item panel__features">
+              <p class="light-blue">Features:GPS, Waterproof, Bluetooth</p>
+              <a href="https://www.forwardslashny.com/" target="_blank"><span class="s s-link brown"><span class="hide">hidden</span></span></a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="accordion">
+          <div class="row">
+            <div class="col-4 accordion__item listing__star__img__name">
+              <span class="s s-empty-star brown bolded"><span class="hide">hidden</span></span>
+              <img class="accordion__img" src="./images/watch1.png" alt="Alfred Sung Slim collection series 5">
+              <p class="accordion__brand__name"><span class="brand__name blue uppercase bolded">alfred sung</span><br><span class="brand__sub__name brown">Slim Collection Series 5</span></p>
+            </div>
+            <div class="col-2 accordion__item__tag">
+              <p class="item__tag blue uppercase bolded">as7104sl-1a</p>
+            </div>
+            <div class="col-1 accordion__item__listing">
+              <p class="item__listing brown">$3,700.00</p>
+            </div>
+            <div class="col-2 accordion__item__wholesale">
+              <p class="item__wholesale brown">$3,700.00</p>
+            </div>
+            <div class="col-1 accordion__item__qty brown">
+              <span class="qty__number bolded">0</span>
+              <span class="qty__arrows">
+                <span class="s s-up-arrow"><span class="hide">hide</span></span>
+                <span class="s s-dwon-arrow"><span class="hide">hide</span></span>
+              </span>
+            </div>
+            <div class="col-2 accordion__item__btn">
+              <button class="item__btn uppercase white">add <span class="s s-shopping-cart white"><span class="hide">hidden</span></span></button>
+              <span class="s s-dwon-arrow brown"><span class="hide">hidden</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="row">
+            <div class="col-2 panel__item panel__icons">
+              <a data-fancybox="gallery" href="./images/big-img1.png"><img src="./images/icon1.png" alt="front view"></a>
+              <a data-fancybox="gallery" href="./images/big-img2.png"><img src="./images/icon2.png" alt="belt"></a>
+              <a data-fancybox="gallery" href="./images/big-img3.png"><img src="./images/icon3.png" alt="back view"></a>
+              <a data-fancybox="gallery" href="./images/big-img4.png"><img src="./images/icon4.png" alt="side view"></a>
+            </div>
+            <div class="col-2 panel__item panel__color">
+              <p class="light-blue">Color:Black</p><div class="circle"><span class="hide"></span></div>
+            </div>
+            <div class="col-1 panel__item panel__band">
+              <p class="light-blue">Band:Solid</p>
+            </div>
+            <div class="col-3 panel__item panel__case">
+              <p class="light-blue">Case / bezel material: Titanium / Cobarion</p>
+            </div>
+            <div class="col-4 panel__item panel__features">
+              <p class="light-blue">Features:GPS, Waterproof, Bluetooth</p>
+              <a href="https://www.forwardslashny.com/" target="_blank"><span class="s s-link brown"><span class="hide">hidden</span></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="row">
+            <div class="col-4 accordion__item listing__star__img__name">
+              <span class="s s-empty-star brown bolded"><span class="hide">hidden</span></span>
+              <img class="accordion__img" src="./images/watch4.png" alt="Alfred Sung Slim collection series 5">
+              <p class="accordion__brand__name"><span class="brand__name blue uppercase bolded">garmin</span><br><span class="brand__sub__name brown">Classic Collection Series 6</span></p>
+            </div>
+            <div class="col-2 accordion__item__tag">
+              <p class="item__tag blue uppercase bolded">as2e0g8e-2u</p>
+            </div>
+            <div class="col-1 accordion__item__listing">
+              <p class="item__listing brown">$2,100.00</p>
+            </div>
+            <div class="col-2 accordion__item__wholesale">
+              <p class="item__wholesale brown">$2,000.00</p>
+            </div>
+            <div class="col-1 accordion__item__qty brown">
+              <span class="qty__number bolded">0</span>
+              <span class="qty__arrows">
+                <span class="s s-up-arrow"><span class="hide">hide</span></span>
+                <span class="s s-dwon-arrow"><span class="hide">hide</span></span>
+              </span>
+            </div>
+            <div class="col-2 accordion__item__btn">
+              <button class="item__btn uppercase white">add <span class="s s-shopping-cart white"><span class="hide">hidden</span></span></button>
+              <span class="s s-dwon-arrow brown"><span class="hide">hidden</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="row">
+            <div class="col-2 panel__item panel__icons">
+              <a data-fancybox="gallery" href="./images/big-img1.png"><img src="./images/icon1.png" alt="front view"></a>
+              <a data-fancybox="gallery" href="./images/big-img2.png"><img src="./images/icon2.png" alt="belt"></a>
+              <a data-fancybox="gallery" href="./images/big-img3.png"><img src="./images/icon3.png" alt="back view"></a>
+              <a data-fancybox="gallery" href="./images/big-img4.png"><img src="./images/icon4.png" alt="side view"></a>
+            </div>
+            <div class="col-2 panel__item panel__color">
+              <p class="light-blue">Color:Black</p><div class="circle"><span class="hide"></span></div>
+            </div>
+            <div class="col-1 panel__item panel__band">
+              <p class="light-blue">Band:Solid</p>
+            </div>
+            <div class="col-3 panel__item panel__case">
+              <p class="light-blue">Case / bezel material: Titanium / Cobarion</p>
+            </div>
+            <div class="col-4 panel__item panel__features">
+              <p class="light-blue">Features:GPS, Waterproof, Bluetooth</p>
+              <a href="https://www.forwardslashny.com/" target="_blank"><span class="s s-link brown"><span class="hide">hidden</span></span></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -469,10 +665,11 @@
   </footer>
   <!--build:js js/main.min.js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script type="text/javascript" src="./js/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="jquery.fancybox.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/timeline.js"></script>
-  
   <!-- endbuild -->
 </body>
 </html>

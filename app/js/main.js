@@ -138,7 +138,7 @@ $('document').ready(function(){
 
 
   //Accordion
-  var acc = document.getElementsByClassName("accordion");
+  /* var acc = document.getElementsByClassName("accordion");
   var i;
 
   for (i = 0; i < acc.length; i++) {
@@ -151,5 +151,58 @@ $('document').ready(function(){
       panel.style.display = "block";
     }
   });
+  } */
+
+  var acc = $('.accordion');
+
+  for (var i = 0; i < acc.length; i++) {
+    acc.on("click", function() {
+      console.log($(this));
+      console.log($(this).next());
+      
+      //console.log(panel);
+      $(this).toggleClass('opened');
+      
+      if ($(this).hasClass('opened')) {
+        
+        $(this).css({'box-shadow':'0px -17px 36px -24px rgba(157,154,151,1)',
+                      'border-left':'1px solid #ddccb8',
+                      'border-right':'1px solid #ddccb8',
+                      'border-top':'1px solid #ddccb8',
+                      'margin-bottom': '-3px'})
+        var panel = $(this).next();
+        panel.css({'display':'block'});
+        panel.css({'box-shadow':'0px 16px 36px -24px rgba(157,154,151,1)'})
+
+        $(this).on('click',function(){
+          panel.css({'display':'none'});
+          $(this).removeClass('opened');
+        })
+      } 
+    });
   }
+
+  //Select
+  var selectedValue = $('.listing__select');
+  var choices = $('.choices__appear');
+  var values = [];
+
+  selectedValue.change(function() {
+    var value = $(this).val();
+    values.push(value);
+
+    for (let i = 0; i < values.length; i++) {
+      
+      var element = '<span class="choice">'+value+'<span class="s s-close"><span class="hide"></span></span></span>';
+    }
+    choices.append(element);
+  })
+
+  var accordionStar = $('.listing__star__img__name');
+
+  var star = accordionStar.find('.s');
+
+  star.on('click',function(){
+    $(this).toggleClass('s-empty-star s-full-star');
+  })
 });

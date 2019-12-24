@@ -79,6 +79,107 @@
     display: flex;
     align-items: center;
     padding: 0 29px 0 33px;
+    position: relative;
+
+    .arrow__box {
+      top: 86px;
+      right: 124px;
+      position: absolute;
+      background: $white;
+      border: 1px solid $footer-link;  /*set border colour here*/
+      width: 450px;
+      height: 150px;
+
+      .item__added__msg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid $grey;
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        width: 100%;
+        font-size: 14px;
+        padding: 15px 0;
+
+        p {
+          letter-spacing: 0.025em;
+        }
+      }
+
+      .item__img__title {
+        display: flex;
+        align-items: center;
+        padding-top: 30px;
+
+        img {
+          height: 40px;
+          padding-left: 37px;
+        }
+
+        .title {
+          padding-left: 23px;
+        }
+
+        .title__brand__name {
+          font-size: 18px;
+          line-height: 22px;
+          margin-top: -1px;
+        }
+
+        .title__sub__name {
+          font-size: 16px;
+        }
+      }
+
+      .item__added {
+        font-family: 'Lato', sans-serif;
+        display: flex;
+        position: relative;
+
+        .s-close {
+          position: absolute;
+          display: block;
+          right: 20px;
+          top: 13px;
+        }
+      }
+
+      .title__name {
+        letter-spacing: 0.07em;
+      }
+
+      .item__tag {
+        padding-top: 30px;
+        padding-left: 52px;
+        letter-spacing: -0.05em;
+      }
+    }
+    
+    .arrow__box:after,
+    .arrow__box:before {
+      bottom: 100%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+    
+    .arrow__box:after {
+      border-color: rgba(255, 255, 255, 0);
+      border-bottom-color: $white;
+      border-width: 19px;
+      left: 90%;
+      margin-left: -19px;
+    }
+    
+    .arrow__box:before {
+      border-bottom-color: $footer-link;
+      border-width: 20px;
+      left: 90%;
+      margin-left: -20px;
+    }
   }
 
   .s-shopping-cart {
