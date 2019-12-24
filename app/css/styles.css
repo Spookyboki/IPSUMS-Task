@@ -738,6 +738,7 @@ a {
     padding: 0 29px 0 33px;
     position: relative; }
     .header .header__shop__cart .arrow__box {
+      display: none;
       top: 86px;
       right: 124px;
       position: absolute;
@@ -788,6 +789,8 @@ a {
         padding-top: 30px;
         padding-left: 52px;
         letter-spacing: -0.05em; }
+    .header .header__shop__cart .arrow__box--visible {
+      display: block; }
     .header .header__shop__cart .arrow__box:after,
     .header .header__shop__cart .arrow__box:before {
       bottom: 100%;
@@ -922,7 +925,12 @@ a {
       position: fixed;
       transition: all 0.15s linear; }
       .header .header__wrapper {
-        padding: 0 22px; } }
+        padding: 0 22px; }
+      .header .header__shop__cart .arrow__box {
+        right: 0px; }
+      .header .header__shop__cart .arrow__box:before,
+      .header .header__shop__cart .arrow__box:after {
+        left: 56%; } }
   @media (max-width: 767px) {
     .header {
       position: fixed;
@@ -1324,6 +1332,39 @@ a {
       letter-spacing: 0.26em;
       margin-left: -12px;
       margin-top: 5px; }
+  @media screen and (max-width: 1394px) {
+    .accordion .accordion__item__btn .item__btn {
+      font-size: 14px;
+      height: 38px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .accordion .s-empty-star {
+      padding-right: 8px; }
+    .accordion .accordion__img {
+      height: 38px;
+      padding-right: 11px; }
+    .accordion .brand__name {
+      font-size: 14px; }
+    .accordion .brand__sub__name {
+      font-size: 12px; }
+    .accordion .item__tag {
+      margin-left: 0px; }
+    .accordion .item__listing {
+      margin-left: 20px; }
+    .accordion .accordion__item__wholesale {
+      margin-left: 9px; }
+    .accordion .accordion__item__qty {
+      margin-left: -13px;
+      padding-top: 16px; }
+    .accordion .accordion__item__btn {
+      margin-left: 20px;
+      margin-top: 10px; } }
+
+.accordion--opened {
+  box-shadow: 0px -17px 36px -24px #9d9a97;
+  border-left: 1px solid #ddccb8;
+  border-right: 1px solid #ddccb8;
+  border-top: 1px solid #ddccb8;
+  margin-bottom: -3px; }
 
 .panel {
   padding: 22px 18px;
@@ -1379,6 +1420,32 @@ a {
   .panel .panel__case,
   .panel .panel__features {
     letter-spacing: 0.001em; }
+  @media screen and (max-width: 1394px) {
+    .panel .panel__icons {
+      margin-left: 0; }
+    .panel .panel__color p {
+      margin-left: 0; }
+    .panel .panel__band {
+      margin-left: -15px;
+      margin-top: 13px; }
+    .panel .panel__features p {
+      padding-right: 13px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .panel .panel__icons {
+      margin-left: 0; }
+      .panel .panel__icons img {
+        padding-right: 9px; }
+    .panel .panel__color p {
+      margin-left: 0; }
+    .panel .panel__band {
+      margin-left: 5px;
+      margin-top: 11px; }
+    .panel .panel__case {
+      padding-left: 0; }
+    .panel .panel__features {
+      margin-top: 10px; }
+      .panel .panel__features p {
+        padding-right: 29px; } }
 
 .search__select__box {
   background-color: #f5f2ee; }
@@ -1400,12 +1467,21 @@ a {
       position: absolute;
       left: 19px;
       top: 45px; }
+  @media screen and (max-width: 1394px) {
+    .search__select__box .wrapper__search__select {
+      padding: 0px 100px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .search__select__box .wrapper__search__select {
+      padding: 0 22px; }
+    .search__select__box .search__select__item .search__select__input {
+      padding: 10px 0 11px 43px; } }
 
 .listing {
   border-bottom: 5px solid #304061;
   padding-bottom: 61px;
   position: relative; }
   .listing .listing__cart {
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -1414,13 +1490,41 @@ a {
     background-color: #fff;
     border: 1px solid #ddccb8;
     z-index: 5; }
+  .listing .listing__cart--visible {
+    display: block; }
   .listing .listing__cart__box {
     overflow-y: scroll; }
-  .listing .item .s-close {
+  .listing .item {
+    display: flex;
+    align-items: center; }
+    .listing .item .s-close {
+      cursor: pointer; }
+  .listing .item__id {
+    display: none; }
+  .listing .item__qty__inc,
+  .listing .item__qty__dec {
     cursor: pointer; }
+  .listing .listing__cart__title {
+    font-family: 'Lato', 'Sans serif';
+    font-size: 20px; }
+  .listing .checkout {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: 'Lato', 'Sans serif'; }
 
 .listing__wrapper {
   padding: 0 207px 0 273px; }
+  @media screen and (max-width: 1844px) {
+    .listing__wrapper {
+      padding: 0 120; } }
+  @media screen and (max-width: 1394px) {
+    .listing__wrapper {
+      padding: 0px 100px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .listing__wrapper {
+      padding: 0 22px; } }
 
 .select__box {
   padding-bottom: 30px;
@@ -1432,6 +1536,12 @@ a {
 
 .wrapper__choices {
   padding: 0px 274px; }
+  @media screen and (max-width: 1394px) {
+    .wrapper__choices {
+      padding: 0px 100px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .wrapper__choices {
+      padding: 0px 22px; } }
 
 .choice {
   color: #a9836b;
@@ -1450,6 +1560,12 @@ a {
     padding-left: 20px; }
     .choice .s-close:hover {
       cursor: pointer; }
+  @media screen and (max-width: 1394px) {
+    .choice {
+      margin-bottom: 12px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .choice {
+      margin-bottom: 12px; } }
 
 .accordion__col__names {
   display: flex;
@@ -1475,6 +1591,19 @@ a {
     padding-right: 15px; }
   .accordion__col__names .accordion__name__qty {
     margin-left: 70px; }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .accordion__col__names {
+      padding: 41px 0 13px 30px; }
+      .accordion__col__names .accordion__name__brand {
+        padding-left: 36px; }
+      .accordion__col__names .accordion__name__item__no {
+        margin-left: 0px; }
+      .accordion__col__names .accordion__name__listing {
+        margin-left: 17px; }
+      .accordion__col__names .accordion__name__wholesale {
+        padding-right: 29px; }
+      .accordion__col__names .accordion__name__qty {
+        margin-left: -8px; } }
 
 .footer {
   height: 655px;

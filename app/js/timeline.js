@@ -1,16 +1,16 @@
 (function() {
 
-  const timeline = document.querySelector(".timeline ol"),
-  elH = document.querySelectorAll(".timeline li > div"),
-  arrows = document.querySelectorAll(".timeline .arrows .arrow"),
-  arrowPrev = document.querySelector(".timeline .arrows .arrow__prev"),
-  arrowNext = document.querySelector(".timeline .arrows .arrow__next"),
-  firstItem = document.querySelector(".timeline li:first-child"),
-  lastItem = document.querySelector(".timeline li:last-child"),
-  xScrolling = 280,
-  disabledClass = "disabled";
+  const timeline = $('.timeline ol')[0],
+    elH = $('.timeline li > div'),
+    arrows = $('.timeline .arrows .arrow'),
+    arrowPrev = $('.timeline .arrows .arrow__prev')[0],
+    arrowNext = $('.timeline .arrows .arrow__next')[0],
+    firstItem = $('.timeline li:first-child')[0],
+    lastItem = $('.timeline li:last-child')[0],
+    xScrolling = 280,
+    disabledClass = 'disabled';
 
-  window.addEventListener("load", init);
+  $(window).on('load', init);
 
   function init() {
     setEqualHeights(elH);
@@ -28,7 +28,7 @@
     }
 
     for (let i = 0; i < el.length; i++) {
-      el[i].style.height = `${counter}px`;
+      $(el[i]).css('height', `${counter}px`);
     }
   }
 
@@ -56,20 +56,20 @@
   function animateTl(scrolling, el, tl) {
     let counter = 0;
     for (let i = 0; i < el.length; i++) {
-      el[i].addEventListener("click", function() {
+      $(el[i]).on('click', function() {
         if (!arrowPrev.disabled) {
           arrowPrev.disabled = true;
         }
         if (!arrowNext.disabled) {
           arrowNext.disabled = true;
         }
-        const sign = (this.classList.contains("arrow__prev")) ? "" : "-";
+        const sign = (this.classList.contains('arrow__prev')) ? '' : '-';
         if (counter === 0) {
           tl.style.transform = `translateX(-${scrolling}px)`;
         } else {
           const tlStyle = getComputedStyle(tl);
-          const tlTransform = tlStyle.getPropertyValue("-webkit-transform") || tlStyle.getPropertyValue("transform");
-          const values = parseInt(tlTransform.split(",")[4]) + parseInt(`${sign}${scrolling}`);
+          const tlTransform = tlStyle.getPropertyValue('-webkit-transform') || tlStyle.getPropertyValue('transform');
+          const values = parseInt(tlTransform.split(',')[4]) + parseInt(`${sign}${scrolling}`);
           tl.style.transform = `translateX(${values}px)`;
         }
 

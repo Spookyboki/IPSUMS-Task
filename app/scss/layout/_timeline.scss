@@ -18,7 +18,7 @@
     width: 100vw;
     padding: 250px 0;
     transition: all 1s;
-    
+
 
     li {
       position: relative;
@@ -74,7 +74,7 @@
           width: 280px;
         }
       }
-      
+
       .timeline__text__box--first {
         left: 45%;
       }
@@ -131,7 +131,7 @@
   }
 
   @include breakpoint (tablet) {
-    
+
     height: 972px;
 
     .timeline__title {
@@ -140,7 +140,7 @@
   }
 
   @include breakpoint (phone) {
-    
+
     height: 730px;
     padding-top: 58px;
 

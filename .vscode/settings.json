@@ -1,0 +1,26 @@
+{
+  "[html]": {
+      "editor.rulers": [
+          120
+      ],
+      "editor.wordWrapColumn": 120
+  },
+  "[json]": {
+      "editor.rulers": [
+          120
+      ],
+      "editor.wordWrapColumn": 120
+  },
+  "[javascript]": {},
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+      80
+  ],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "wordWrapColumn",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "git.ignoreLimitWarning": true,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false
+}
