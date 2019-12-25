@@ -5,13 +5,11 @@ let shoppingCart = [];
 $('document').ready(function() {
 
   //Slick
-
   $('.slider').slick({
 
   })
 
   //Header
-
   let hamburgerIcon = $('.hamburger__javascript');
   let dropNav = $('.header__nav');
   let headerDropIcon = $('.header__drop__icon');
@@ -99,7 +97,6 @@ $('document').ready(function() {
   })
 
   //Timeline
-
   let timelineTextBoxEven = $(".timeline__text__box:even");
   let timelineTextBoxOdd = $(".timeline__text__box:odd");
 
@@ -154,6 +151,18 @@ $('document').ready(function() {
           $(panel).css('display', 'none');
         } else {
           $(panel).css('display', 'block');
+        }
+
+        if ($(this).hasClass('accordion--opened')) {
+          let dArrow = $(this).find('.arrow--transform');
+          dArrow.removeClass('s-dwon-arrow');
+          dArrow.addClass('s-up-arrow');
+        }
+
+        else {
+          let uArrow = $(this).find('.arrow--transform');
+          uArrow.addClass('s-dwon-arrow');
+          uArrow.removeClass('s-up-arrow');
         }
       }
     });
@@ -239,7 +248,6 @@ $('document').ready(function() {
       }, 3000);
 
       renderCartBox();
-
     }
   });
 
@@ -272,13 +280,13 @@ function renderCartBox() {
         <span class="brand__name blue uppercase bolded">${item.brand}</span><br>
         <span class="item__ brand__sub__name brand__sub__name brown">
         ${item.name}</span></p>
-      <div class="item__price">${item.price}</div>
+      <div class="item__price brown">${item.price}</div>
       <div class="item__qty">
-        <span class="number">${item.quantity}</span>
-        <span class="item__id">${item.id}</span>
-        <span>
-          <span class="s s-up-arrow item__qty__inc"><span class="hide">hide</span></span>
-          <span class="s s-dwon-arrow item__qty__dec"><span class="hide">hide</span></span>
+        <span class="number brown">${item.quantity}</span>
+        <span class="item__id brown">${item.id}</span>
+        <span class="arrows">
+          <span class="s s-up-arrow brown item__qty__inc"><span class="hide">hide</span></span>
+          <span class="s s-dwon-arrow brown item__qty__dec"><span class="hide">hide</span></span>
         </span>
       </div>
     </div>`);
@@ -289,6 +297,8 @@ function renderCartBox() {
     sum += parseFloat(price) * item.quantity;
   });
   $('.sum').html('$' + formatMoney(sum / 100));
+  //increasing total in header
+  $('.header__item__total__price').html('$' + formatMoney(sum / 100));
 
   //Quantity increasing
   $('.item__qty__inc').on('click', e => {
@@ -329,10 +339,44 @@ function formatMoney(number, decPlaces, decSep, thouSep) {
   thouSep = typeof thouSep === "undefined" ? "," : thouSep;
   let sign = number < 0 ? "-" : "";
   let i = String(parseInt(number = Math.abs(Number(number) || 0).toFixed(decPlaces)));
-  let j = (j = i.length) > 3 ? j % 3 : 0;
+  let j = i.length;
+  j = j > 3 ? j % 3 : 0;
 
   return sign +
     (j ? i.substr(0, j) + thouSep : "") +
     i.substr(j).replace(/(\decSep{3})(?=\decSep)/g, "$1" + thouSep) +
     (decPlaces ? decSep + Math.abs(number - i).toFixed(decPlaces).slice(2) : "");
 }
+
+//pagination
+function pagination() {
+
+  var offset = $(document).scrollTop();
+  var windowHeight = $(window).height();
+  var $body = $('body');
+
+  switch (true) {
+    case (offset > (windowHeight * 1.70)):
+      $body.removeClass().addClass('page-4');
+      break;
+    case (offset > (windowHeight * .90)):
+      $body.removeClass().addClass('page-3');
+      break;
+    case (offset > (windowHeight * .35)):
+      $body.removeClass().addClass('page-2');
+      break;
+    default:
+      $body.removeClass().addClass('page-1');
+  }
+}
+
+pagination();
+
+$(document).on('scroll', pagination);
+
+$(document).on('click', 'a[href^="#"]', function(e) {
+  e.preventDefault();
+  $('html, body').animate({
+    scrollTop: $($.attr(this, 'href')).offset().top
+  }, 500);
+});

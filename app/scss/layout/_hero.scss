@@ -9,7 +9,7 @@
     padding: 0px 298px;
     position: relative;
   }
-  
+
   .hero__content {
     display: flex;
   }
@@ -17,10 +17,10 @@
   .hero__item__title {
     font-size: 82px;
     letter-spacing: 0.01em;
-    word-spacing: 0.12em;
+    word-spacing: 0.2em;
     line-height: 1.05;
     font-family: 'Myriad Pro normal';
-    padding-bottom: 80px;
+    padding-bottom: 78px;
   }
 
   .hero__item__text {
@@ -93,7 +93,7 @@
   @media screen and (max-width: 1405px) {
 
     background-position-x: -300px;
-    
+
     .wrapper {
       padding: 0px 71px 0 298px;
     }
@@ -102,13 +102,13 @@
   @media screen and (max-width: 1180px) {
 
     background-position-x: -480px;
-    
+
     .wrapper {
       padding: 0px 71px 0 200px;
     }
 
     .hero__item__title {
-      font-size: 76px;
+      font-size: 70px;
     }
 
     .hero__explore {

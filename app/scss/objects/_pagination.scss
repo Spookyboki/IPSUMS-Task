@@ -1,0 +1,75 @@
+$degrees: 5deg;
+$base-color: $footer-link;
+
+.main {
+  section {
+    margin: 0;
+    height: 100vh;
+
+    @for $i from 1 to 4 {
+      &:nth-child(#{$i}) {
+        background-color: lighten($base-color, $degrees*$i);
+      }
+    }
+  }
+}
+
+.pagination {
+  position: fixed;
+  top: 20.8%;
+  left: 58px;
+  list-style: none;
+  z-index: 10;
+
+  li {
+    position: relative;
+    margin: 26px 0;
+    background: $footer-border;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    transition: all .2s ease;
+
+    &:hover {
+      transform: scale(1.5);
+      background: $footer-link;
+    }
+  }
+
+  a {
+    position: absolute;
+    text-decoration: none;
+    left: 0;
+    top: 0;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include breakpoint (tablet) {
+    right: 22px;
+    left: auto;
+  }
+
+  @include breakpoint (phone) {
+    display: none;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+
+  @for $i from 1 to 4 {
+    &.page-#{$i} {
+      .pagination li:nth-of-type(#{$i}) {
+        @extend %active-dot;
+      }
+    }
+  }
+}
+
+%active-dot {
+  transform: scale(1.5);
+  background: $footer-link;
+}

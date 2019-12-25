@@ -54,8 +54,8 @@
   .header__browse__text {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
-    letter-spacing: 0.1em;
-    padding-right: 33px;
+    letter-spacing: 0.114em;
+    padding-right: 30px;
   }
 
   .header__info {
@@ -87,7 +87,7 @@
       right: 124px;
       position: absolute;
       background: $white;
-      border: 1px solid $footer-link;  /*set border colour here*/
+      border: 1px solid $footer-link;
       width: 450px;
       height: 150px;
 
@@ -164,7 +164,7 @@
     .arrow__box:before {
       bottom: 100%;
       border: solid transparent;
-      content: " ";
+      content: ' ';
       height: 0;
       width: 0;
       position: absolute;
@@ -384,6 +384,58 @@
 
     position: fixed;
     transition: all 0.15s linear;
+
+    .header__shop__cart {
+
+      .arrow__box {
+        right: 15px;
+        width: 290px;
+        height: 118px;
+
+        .item__tag {
+          font-size: 12px;
+          padding-left: 10px;
+        }
+
+        .item__added {
+
+          .s-close {
+            font-size: 20px;
+          }
+        }
+
+        .item__added__msg {
+          font-size: 12px;
+        }
+
+        .item__img__title {
+          padding-top: 20px;
+
+          .title {
+            padding-left: 7px;
+          }
+
+          img {
+            padding-left: 16px;
+            height: 32px;
+          }
+
+          .title__brand__name {
+            font-size: 13px;
+            margin-top: 0px;
+          }
+
+          .title__sub__name {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .arrow__box:before,
+      .arrow__box:after {
+        left: 27%;
+      }
+    }
 
     .header__wrapper {
       padding: 0 20px;
